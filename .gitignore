@@ -1,0 +1,9 @@
+*.snap
+.idea
+.snapcraft
+coverage.txt
+dist
+muffet
+parts
+prime
+stage

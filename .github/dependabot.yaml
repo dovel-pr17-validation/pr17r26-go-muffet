@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    groups:
+      codeql:
+        patterns:
+          - github/codeql-action/*
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /doc
+    schedule:
+      interval: daily
+    groups:
+      astro:
+        patterns:
+          - astro
+          - "@astrojs/*"
